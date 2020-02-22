@@ -133,10 +133,12 @@ function createComponent(title, date, firstParagraph, secondParagraph, thirdPara
   const buttonContainer = document.createElement('span');
   const buttonOpen = document.createElement('button');
   const buttonClose = document.createElement('button');
+  const getPar1 = document.createElement('p');
   // setup the structure of our elements (appendChild or prependChild)
   article.appendChild(articleTitle);
   article.appendChild(articleDate);
   article.appendChild(expandButton);
+  article.appendChild(getPar1);
   expandButton.appendChild(buttonContainer);
   expandButton.appendChild(buttonOpen);
   expandButton.appendChild(buttonClose);
@@ -147,7 +149,7 @@ function createComponent(title, date, firstParagraph, secondParagraph, thirdPara
   expandButton.classList.add('expandButton');
   buttonClose.classList.add('hide-btn');
   // set text content (for those elements with content inside, refer to the html)
-  buttonContainer.textContent = firstParagraph + secondParagraph + thirdParagraph;
+  getPar1.textContent = firstParagraph + secondParagraph + thirdParagraph;
   articleTitle.textContent = title;
   articleDate.textContent = date;
   buttonOpen.textContent = '\u25bc';
